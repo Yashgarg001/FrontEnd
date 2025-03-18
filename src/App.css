@@ -1,0 +1,106 @@
+/* App Container */
+.app-container {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  background: #f5f5f5;
+}
+
+/* Navbar */
+.navbar {
+  width: 100%;
+  background: #4285f4;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  box-sizing: border-box;
+}
+
+/* Navbar Brand */
+.navbar-brand {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navbar Links */
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.navbar-link {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+/* Separator */
+.separator {
+  color: white;
+}
+
+/* Form Container */
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+/* Login/Signup Card */
+.form-card {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Input Fields */
+.form-input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+/* Button */
+.form-button {
+  width: 100%;
+  padding: 12px;
+  margin: 20px 0;
+  border: none;
+  border-radius: 5px;
+  background: #4285f4;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.form-button:hover {
+  background: #3367d6;
+}
+
+/* Register/Login Link */
+.auth-link {
+  text-align: center;
+  color: #666;
+}
+
+.auth-link a {
+  color: #4285f4;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.auth-link a:hover {
+  text-decoration: underline;
+}

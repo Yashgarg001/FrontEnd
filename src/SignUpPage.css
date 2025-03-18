@@ -1,0 +1,94 @@
+/* Center the form on the page */
+.signup-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px);
+    background-color: #f4f4f4;
+    margin: 0;
+    overflow: hidden;
+    padding-top: 2px; /* Further reduced padding */
+  }
+  
+  /* Card Structure */
+  .signup-card {
+    background: #ffffff;
+    padding: 10px; /* Further reduced padding */
+    border-radius: 8px; /* Slightly reduced border radius */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Slightly reduced box shadow */
+    width: 100%;
+    max-width: 450px; /* Further reduced max-width */
+    text-align: center;
+    box-sizing: border-box;
+  }
+  
+  /* Title */
+  .signup-title {
+    margin-bottom: 2px; /* Further reduced margin */
+    color: #333;
+    font-size: 24px; /* Further reduced font size */
+  }
+  
+  /* Form Group */
+  .form-group {
+    margin-bottom: 5px; /* Further reduced margin */
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px; /* Further reduced margin */
+    color: #555;
+    font-weight: bold;
+    font-size: 14px; /* Further reduced font size */
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px; /* Further reduced padding */
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Slightly reduced border radius */
+    font-size: 12px; /* Further reduced font size */
+    box-sizing: border-box;
+  }
+  
+  /* Error Message */
+  .error {
+    color: red;
+    font-size: 12px; /* Further reduced font size */
+    margin-top: 1px; /* Further reduced margin */
+    text-align: left;
+    word-wrap: break-word;
+    white-space: normal;
+  }
+  
+  /* Signup Button */
+  .signup-btn {
+    width: 100%;
+    padding: 8px; /* Further reduced padding */
+    background-color: #4285f4;
+    color: white;
+    border: none;
+    border-radius: 4px; /* Slightly reduced border radius */
+    font-size: 16px; /* Further reduced font size */
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 4px; /* Further reduced margin */
+  }
+  
+  .signup-btn:hover {
+    background-color: #357ae8;
+  }
+  
+  /* Login Link */
+  .login-link {
+    margin-top: 12px; /* Further reduced margin */
+    color: #555;
+    font-size: 12px; /* Further reduced font size */
+  }
+  
+  .link {
+    color: #4285f4;
+    cursor: pointer;
+    text-decoration: underline;
+  }
