@@ -1,14 +1,17 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { useFormik } from 'formik';
 import * as Yup from 'yup';
-import axios from 'axios'; // Import Axios
+import axios from 'axios';
 import './SignInPage.css';
+import { login } from '../store/authSlice';
 
 function SignInPage() {
+    const dispatch = useDispatch();
     const navigate = useNavigate();
+    const API_URL = 'http://localhost:5164';
 
-    // Formik setup with validation schema
     const formik = useFormik({
         initialValues: {
             name: '',
@@ -16,26 +19,27 @@ function SignInPage() {
             password: ''
         },
         validationSchema: Yup.object({
-            email: Yup.string().email('Invalid email address').required('Required'),
-            password: Yup.string().min(6, 'Password must be at least 6 characters').required('Required'),
+            email: Yup.string().email('Invalid email address').required('Enter your email'),
+            password: Yup.string().min(6, 'Password must be at least 6 characters').required('Enter your password'),
         }),
         onSubmit: async (values) => {
             try {
-                console.log('Submitting values:', values); // Log the values being sent
-                const response = await axios.post('http://localhost:5164/api/auth/login', { // Replace with your login API endpoint
+                // console.log('Submitting values:', values);
+                const response = await axios.post(`${API_URL}/api/auth/login`, {
                     name: '',
                     email: values.email,
                     password: values.password,
                 });
 
-                // Handle successful login
                 console.log('Login successful:', response.data);
-                const token = response.data.token; // Extract the token from the response
-                // Store the token (e.g., in local storage or cookies)
-                localStorage.setItem('token', token); // Store token in local storage
-                navigate('/ChatPage'); // Redirect to a dashboard or protected route
+                const token = response.data.token;
+
+                // Store token in Redux and localStorage
+                dispatch(login(token));
+                localStorage.setItem('token', token);
+
+                navigate('/ChatPage');
             } catch (error) {
-                // Handle login error
                 console.error('Login failed:', error.response ? error.response.data : error.message);
                 if (error.response && error.response.data) {
                     alert(error.response.data);
@@ -51,7 +55,6 @@ function SignInPage() {
             <div className="signin-card">
                 <h2 className="signin-title">Login</h2>
                 <form onSubmit={formik.handleSubmit}>
-                    {/* Email */}
                     <div className="form-group">
                         <label>Email</label>
                         <input
@@ -68,7 +71,6 @@ function SignInPage() {
                         ) : null}
                     </div>
 
-                    {/* Password */}
                     <div className="form-group">
                         <label>Password</label>
                         <input
@@ -85,11 +87,9 @@ function SignInPage() {
                         ) : null}
                     </div>
 
-                    {/* Login Button */}
                     <button type="submit" className="login-btn">Login</button>
                 </form>
 
-                {/* Register Link */}
                 <p className="register-link">
                     Don't have an account? <span onClick={() => navigate('/SignUpPage')} className="link">Register</span>
                 </p>

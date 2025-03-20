@@ -1,4 +1,3 @@
-/* App Container */
 .app-container {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -7,7 +6,6 @@
   background: #f5f5f5;
 }
 
-/* Navbar */
 .navbar {
   width: 100%;
   background: #4285f4;
@@ -19,13 +17,11 @@
   box-sizing: border-box;
 }
 
-/* Navbar Brand */
 .navbar-brand {
   font-size: 24px;
   font-weight: bold;
 }
 
-/* Navbar Links */
 .navbar-links {
   display: flex;
   align-items: center;
@@ -38,12 +34,10 @@
   font-size: 16px;
 }
 
-/* Separator */
 .separator {
   color: white;
 }
 
-/* Form Container */
 .form-container {
   display: flex;
   justify-content: center;
@@ -51,7 +45,6 @@
   min-height: 80vh;
 }
 
-/* Login/Signup Card */
 .form-card {
   background: white;
   padding: 40px;
@@ -61,7 +54,6 @@
   max-width: 400px;
 }
 
-/* Input Fields */
 .form-input {
   width: 100%;
   padding: 10px;
@@ -71,7 +63,6 @@
   box-sizing: border-box;
 }
 
-/* Button */
 .form-button {
   width: 100%;
   padding: 12px;
@@ -89,7 +80,6 @@
   background: #3367d6;
 }
 
-/* Register/Login Link */
 .auth-link {
   text-align: center;
   color: #666;

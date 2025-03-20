@@ -1,16 +1,14 @@
-/* Center the form on the page */
 .signin-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Adjust to avoid overflow from the navbar */
+    height: calc(100vh - 60px);
     background-color: #f4f4f4;
     margin: 0;
     overflow: hidden;
   }
   
   
-  /* Card Structure */
   .signin-card {
     background: #ffffff;
     padding: 20px;
@@ -28,14 +26,12 @@
     overflow: hidden;
   }
   
-  /* Title */
   .signin-title {
     margin-bottom: 20px;
     color: #333;
     font-size: 24px;
   }
   
-  /* Form Group */
   .form-group {
     margin-bottom: 20px;
     text-align: left;
@@ -58,7 +54,6 @@
     box-sizing: border-box;
   }
   
-  /* Error Message */
   .error {
     color: red;
     font-size: 12px;
@@ -66,7 +61,6 @@
     text-align: left;
   }
   
-  /* Login Button */
   .login-btn {
     width: 100%;
     padding: 12px;
@@ -84,7 +78,6 @@
     background-color: #357ae8;
   }
   
-  /* Register Link */
   .register-link {
     margin-top: 15px;
     color: #555;
